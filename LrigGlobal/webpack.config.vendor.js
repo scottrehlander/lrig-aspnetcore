@@ -25,6 +25,8 @@ module.exports = {
             '@angular/router',
             '@angular/platform-server',
             '@angular/forms',
+            'angular2-jwt',
+            'angular2-datatable',
             'angular2-universal',
             'angular2-universal-polyfills',
             'bootstrap',
@@ -33,8 +35,7 @@ module.exports = {
             'es6-promise',
             'font-awesome/css/font-awesome.css',
             'jquery',
-            'zone.js',
-            'angular2-jwt'
+            'zone.js'
         ]
     },
     output: {

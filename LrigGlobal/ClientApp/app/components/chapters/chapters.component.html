@@ -1,15 +1,16 @@
-﻿<template ngFor let-chapter let-i="index" [ngForOf]="chapters">
-    <div class="row">
+﻿<div class="row">
+    <template ngFor let-chapter let-i="index" [ngForOf]="chapters">
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail chapter-thumbnail">
                 <div class="caption">
-                    {{i}}
-                    <h3>{{ chapter.name }}</h3>
+                    <h3 [routerLink]="['/chapters/' + chapter.name]">{{ chapter.name }}</h3>
                     <h5 class="text-muted">Executive chair {{ chapter.chair }}</h5>
-                    <p>{{ chapter.shortDescription }}</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>{{ chapter.shortDescription }}</p>    
+                    <div  style="text-align: right">
+                        <a [routerLink]="['/chapters/' + chapter.name]">Visit chapter site</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</template>
+    </template>
+</div>

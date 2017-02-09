@@ -1,5 +1,33 @@
-﻿<table>
-    <template ngFor let-event [ngForOf]="events">
-        <tr><td>Event Name</td><td>{{ event.name }}</td></tr>
-    </template>
+﻿<table class="table table-striped" [mfData]="events" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+        <tr>
+            <th style="width: 30%">
+                <mfDefaultSorter by="name">Name</mfDefaultSorter>
+            </th>
+            <th style="width: 40%">
+                <mfDefaultSorter by="additionalInfo">Info</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="chapter">Chapter</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+                <mfDefaultSorter by="eventbriteUrl">Eventbrite URL</mfDefaultSorter>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of mf.data">
+            <td>{{item.name}}</td>
+            <td>{{item.additionalInfo}}</td>
+            <td>{{item.chapter}}</td>
+            <td><a href="{{item.eventbriteUrl}}">{{item.eventbriteUrl | lowercase}}</a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+        </tr>
+    </tfoot>
 </table>
