@@ -38,8 +38,13 @@ namespace LrigGlobal
         public void ConfigureServices(IServiceCollection services)
         {
             // DI
-            services.AddTransient<IEventRepository, EventRepository>();
             services.Configure<AppConfigurationSettings>(Configuration.GetSection("AppConfigurationSettings"));
+            
+            // TODO?: Use a custom factory implementation to construct the generic BasicRepository unless
+            //  there is a more specific implementation
+            // Add repositories
+            services.AddTransient<EventsRepository>();
+            services.AddTransient<ChaptersRepository>();
 
             // Add framework services.
             services.AddMvc();

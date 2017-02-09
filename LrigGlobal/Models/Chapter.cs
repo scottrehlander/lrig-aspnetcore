@@ -5,15 +5,9 @@ using System;
 
 namespace LrigGlobal.Models
 {
-    public class Event : LrigBaseModel
+    public class Chapter : LrigBaseModel
     {
         [BsonElement("name")]
         public string Name { get; set; }
-
-        [BsonElement("date")]
-        public DateTime date { get; set; }
-
-        [BsonElement("eventbriteUrl")]
-        public string EventbriteUrl { get; set; }
     }
 }

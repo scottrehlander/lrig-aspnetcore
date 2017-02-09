@@ -4,16 +4,16 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
-import { Event } from '../models/event';
+import { Chapter } from '../models/chapter';
 
 @Injectable()
-export class EventsService {
+export class ChaptersService {
     constructor(private http: Http) { }
 
-    getEvents(): Observable<Event[]> {
-        let events$ = this.http.get('/api/Events/GetAll').map(function (response: Response) {
+    getChapters(): Observable<Chapter[]> {
+        let chapters$ = this.http.get('/api/Chapters/GetChapters').map(function (response: Response) {
             return response.json();
         });
-        return events$;
-    } 
+        return chapters$;
+    }
 }

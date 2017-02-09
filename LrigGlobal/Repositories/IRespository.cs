@@ -7,15 +7,15 @@ using LrigGlobal.Models;
 
 namespace LrigGlobal.Repositories
 {
-    public interface IEventRepository
+    public interface IRepository<T> where T : LrigBaseModel
     {
-        IEnumerable<Event> AllEvents();
+        IEnumerable<T> GetAll();
 
-        Event GetById(ObjectId id);
+        T GetById(ObjectId id);
 
-        void Add(Event ev);
+        void Add(T item);
 
-        void Update(Event speaker);
+        void Update(T item);
 
         bool Remove(ObjectId id);
     }

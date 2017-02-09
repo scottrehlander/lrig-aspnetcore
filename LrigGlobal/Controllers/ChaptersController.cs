@@ -9,8 +9,8 @@ using LrigGlobal.Repositories;
 namespace LrigGlobal.Controllers
 {
     [Route("api/[controller]")]
-    public class EventsController : BasicCrudController<Event>
+    public class ChaptersController : BasicCrudController<Chapter>
     {
-        public EventsController(EventsRepository eventsRepository) : base(eventsRepository) { }
+        public ChaptersController(ChaptersRepository chapterRepository) : base(chapterRepository) { }
     }
 }

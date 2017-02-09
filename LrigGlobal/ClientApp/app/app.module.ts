@@ -7,6 +7,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EventsComponent } from './components/events/events.component';
+import { ChaptersComponent } from './components/chapters/chapters.component';
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -15,7 +16,8 @@ import { EventsComponent } from './components/events/events.component';
         NavMenuComponent,
         HomeComponent,
         LoginComponent,
-        EventsComponent
+        EventsComponent,
+        ChaptersComponent
     ],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
@@ -25,6 +27,7 @@ import { EventsComponent } from './components/events/events.component';
             { path: 'home', component: HomeComponent },
             { path: 'login', component: LoginComponent },
             { path: 'events', component: EventsComponent },
+            { path: 'chapters', component: ChaptersComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

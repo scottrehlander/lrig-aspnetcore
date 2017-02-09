@@ -11,12 +11,12 @@ import { EventsService } from '../../services/events.service';
 
 export class EventsComponent implements OnInit {
 
+    public events;
+
     constructor(private eventsService: EventsService) { }
 
     ngOnInit(): void {
         this.eventsService.getEvents().subscribe(result => this.events = result);
     }
-
-    public events;
-   
+  
 }
