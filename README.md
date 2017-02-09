@@ -6,5 +6,5 @@ Technology Stack:
 * ASP.Net Core
 * Angular2
 * Webpack
-* Docker
 * MongoDB
+* Bootstrap
