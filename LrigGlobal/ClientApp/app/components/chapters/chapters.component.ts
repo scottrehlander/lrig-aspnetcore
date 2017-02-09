@@ -6,7 +6,8 @@ import { ChaptersService } from '../../services/chapters.service';
 @Component({
     selector: 'chapters',
     template: require('./chapters.component.html'),
-    providers: [ChaptersService]
+    styles: [ require('./chapters.component.css') ],
+    providers: [ ChaptersService ]
 })
 
 export class ChaptersComponent implements OnInit {

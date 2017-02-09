@@ -12,7 +12,7 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
 
     credentials: any;
-    logo: any;
+    logo: string;
     errorText: string;
 
     constructor(private auth: AuthService, private router: Router) {

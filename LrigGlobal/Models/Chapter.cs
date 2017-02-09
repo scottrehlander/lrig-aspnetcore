@@ -9,5 +9,11 @@ namespace LrigGlobal.Models
     {
         [BsonElement("name")]
         public string Name { get; set; }
+        [BsonElement("chair")]
+        public string Chair { get; set; }
+        [BsonElement("shortDescription")]
+        public string ShortDescription { get; set; }
+        [BsonElement("homePageBody")]
+        public string HomePageBody { get; set; }
     }
 }

@@ -6,7 +6,7 @@ import { EventsService } from '../../services/events.service';
 @Component({
     selector: 'events',
     template: require('./events.component.html'),
-    providers: [EventsService]
+    providers: [ EventsService ]
 })
 
 export class EventsComponent implements OnInit {

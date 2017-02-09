@@ -11,7 +11,7 @@ export class ChaptersService {
     constructor(private http: Http) { }
 
     getChapters(): Observable<Chapter[]> {
-        let chapters$ = this.http.get('/api/Chapters/GetChapters').map(function (response: Response) {
+        let chapters$ = this.http.get('/api/Chapters/GetAll').map(function (response: Response) {
             return response.json();
         });
         return chapters$;

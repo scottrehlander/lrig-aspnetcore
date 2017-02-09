@@ -9,11 +9,15 @@ namespace LrigGlobal.Models
     {
         [BsonElement("name")]
         public string Name { get; set; }
-
-        [BsonElement("date")]
-        public DateTime date { get; set; }
-
+        [BsonElement("chapter")]
+        public string Chapter { get; set; }
+        [BsonElement("eventStart")]
+        public DateTime EventStart { get; set; }
+        [BsonElement("eventEnd")]
+        public DateTime EventEnd { get; set; }
+        [BsonElement("additionalInfo")]
+        public string AdditionalInfo { get; set; }
         [BsonElement("eventbriteUrl")]
         public string EventbriteUrl { get; set; }
-    }
+    }   
 }
