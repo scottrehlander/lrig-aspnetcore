@@ -8,8 +8,3 @@ Technology Stack:
 * Webpack
 * MongoDB (NoSql DB)
 * Bootstrap
-
-Implemented Patterns:
-* CRUD
-* Dependency Injection
-* Repository
