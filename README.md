@@ -6,5 +6,10 @@ Technology Stack:
 * ASP.Net Core
 * Angular2
 * Webpack
-* MongoDB
+* MongoDB (NoSql DB)
 * Bootstrap
+
+Implemented Patterns:
+* CRUD
+* Dependency Injection
+* Repository
